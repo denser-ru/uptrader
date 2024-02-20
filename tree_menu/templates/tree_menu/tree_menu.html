@@ -1,0 +1,14 @@
+{% for item in menu_items %}
+<li>
+    <a href="{% if item.url.startswith('name:') %}{% url item.url|slice:'5:' %}{% else %}{{ item.url }}{% endif %}">
+        {{ item.name }}
+    </a>
+    {% if item.children.all %}
+    <ul>
+        {% for child in item.children.all %}
+            {% include 'tree_menu/tree_menu.html' with menu_items=child.children.all %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</li>
+{% endfor %}

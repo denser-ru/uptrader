@@ -1,0 +1,57 @@
+[
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 1,
+      "fields": {
+        "name": "Главная",
+        "url": "/",
+        "parent": null
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 2,
+      "fields": {
+        "name": "Статьи",
+        "url": "/articles/",
+        "parent": null
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 5,
+      "fields": {
+        "name": "Статья 1",
+        "url": "/articles/1/",
+        "parent": 2
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 6,
+      "fields": {
+        "name": "Статья 2",
+        "url": "/articles/2/",
+        "parent": 2
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 3,
+      "fields": {
+        "name": "О нас",
+        "url": "/about/",
+        "parent": null
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 4,
+      "fields": {
+        "name": "Контакты",
+        "url": "/contacts/",
+        "parent": null
+      }
+    }
+  ]
+  

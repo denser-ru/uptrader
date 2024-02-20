@@ -1,0 +1,22 @@
+[
+    {
+        "model": "flatpages.flatpage",
+        "pk": 1,
+        "fields": {
+            "title": "О нас",
+            "content": "Здесь информация о вашей компании.",
+            "url": "/about/",
+            "sites": [1]
+        }
+    },
+    {
+        "model": "flatpages.flatpage",
+        "pk": 2,
+        "fields": {
+            "title": "Контакты",
+            "content": "Здесь информация о том, как с нами связаться.",
+            "url": "/contacts/",
+            "sites": [1]
+        }
+    }
+]

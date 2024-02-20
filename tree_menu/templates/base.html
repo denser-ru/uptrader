@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Мой сайт{% endblock %}</title>
+        <meta charset="utf-8" />
+        <!-- Стили для меню -->
+        <style>
+            .menu ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .menu li {
+                padding: 8px;
+                margin-bottom: 5px;
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+            .menu li.active {
+                background-color: #007bff;
+                color: white;
+            }
+            .menu li ul {
+                margin-top: 5px;
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <!-- Общая шапка для всех страниц -->
+        </header>
+
+        <nav>
+            <!-- Общее навигационное меню -->
+            <div class="menu">
+                <ul>
+                    {% for item in menu_items %}
+                        <li class="{% if item.is_active %}active{% endif %}">
+                            <a href="{{ item.url }}">{{ item.name }}</a>
+                            {% if item.children %}
+                                <ul>
+                                    {% for child in item.children_list %}
+                                        <li class="{% if child.is_active %}active{% endif %}">
+                                            <a href="{{ child.url }}">{{ child.name }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            {% block content %}
+            <!-- Уникальный контент страницы -->
+            {% endblock %}
+        </main>
+
+        <footer>
+            <!-- Общий подвал для всех страниц -->
+        </footer>
+    </body>
+</html>
