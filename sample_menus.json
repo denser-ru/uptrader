@@ -5,7 +5,8 @@
       "fields": {
         "name": "Главная",
         "url": "/",
-        "parent": null
+        "parent": null,
+        "menu_block": 0
       }
     },
     {
@@ -14,7 +15,8 @@
       "fields": {
         "name": "Статьи",
         "url": "/articles/",
-        "parent": null
+        "parent": null,
+        "menu_block": 0
       }
     },
     {
@@ -23,7 +25,8 @@
       "fields": {
         "name": "Статья 1",
         "url": "/articles/1/",
-        "parent": 2
+        "parent": 2,
+        "menu_block": 0
       }
     },
     {
@@ -32,7 +35,8 @@
       "fields": {
         "name": "Статья 2",
         "url": "/articles/2/",
-        "parent": 2
+        "parent": 2,
+        "menu_block": 0
       }
     },
     {
@@ -41,7 +45,8 @@
       "fields": {
         "name": "О нас",
         "url": "/about/",
-        "parent": null
+        "parent": null,
+        "menu_block": 0
       }
     },
     {
@@ -50,7 +55,48 @@
       "fields": {
         "name": "Контакты",
         "url": "/contacts/",
-        "parent": null
+        "parent": null,
+        "menu_block": 0
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 7,
+      "fields": {
+        "name": "Страница 1",
+        "url": "/pages/1/",
+        "parent": null,
+        "menu_block": 1
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 8,
+      "fields": {
+        "name": "Страница 2",
+        "url": "/pages/2/",
+        "parent": null,
+        "menu_block": 1
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 9,
+      "fields": {
+        "name": "Страница 3",
+        "url": "/pages/3/",
+        "parent": 7,
+        "menu_block": 1
+      }
+    },
+    {
+      "model": "tree_menu.menuitem",
+      "pk": 10,
+      "fields": {
+        "name": "Страница 4",
+        "url": "/pages/4/",
+        "parent": 9,
+        "menu_block": 1
       }
     }
   ]

@@ -1,0 +1,8 @@
+{% load custom_filters %}
+<div class="menu">
+    <ul>
+        {% for item in menu_items %}
+            {% include 'tree_menu/tree_menu.html' %}
+        {% endfor %}
+    </ul>
+</div>

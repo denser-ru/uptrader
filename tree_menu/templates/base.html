@@ -31,25 +31,9 @@
         </header>
 
         <nav>
-            <!-- Общее навигационное меню -->
-            <div class="menu">
-                <ul>
-                    {% for item in menu_items %}
-                        <li class="{% if item.is_active %}active{% endif %}">
-                            <a href="{{ item.url }}">{{ item.name }}</a>
-                            {% if item.children %}
-                                <ul>
-                                    {% for child in item.children_list %}
-                                        <li class="{% if child.is_active %}active{% endif %}">
-                                            <a href="{{ child.url }}">{{ child.name }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+            {% block main_menu %}
+            <!-- Блок для отображения меню -->
+            {% endblock %}
         </nav>
 
         <main>
@@ -59,7 +43,9 @@
         </main>
 
         <footer>
+            {% block footer %}
             <!-- Общий подвал для всех страниц -->
+            {% endblock %}
         </footer>
     </body>
 </html>

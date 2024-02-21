@@ -1,0 +1,19 @@
+[
+  {
+    "model": "tree_menu.menublock",
+    "pk": 0,
+    "fields": {
+      "name": "main_menu",
+      "title": "Гланое меню"
+    }
+  },
+  {
+    "model": "tree_menu.menublock",
+    "pk": 1,
+    "fields": {
+      "name": "second_menu",
+      "title": "Второе меню"
+    }
+  }
+]
+  

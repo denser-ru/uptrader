@@ -5,8 +5,8 @@ export DJANGO_SETTINGS_MODULE='UpTrader.settings'
 # Остановить скрипт при ошибках
 #set -e
 
-# Устанавливаем зависимости
-#pip install -r requirements.txt
+# Устанавливаем Django
+pip install Django
 
 # Выполняем миграции
 python manage.py makemigrations
@@ -22,6 +22,7 @@ python manage.py createsuperuser --noinput
 python manage.py collectstatic --noinput
 
 # Загружаем примеры меню в базу данных
+python manage.py loaddata sample_blocks_menu.json
 python manage.py loaddata sample_menus.json
 
 # Загружаем примеры страниц

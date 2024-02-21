@@ -1,7 +1,16 @@
 {% extends "base.html" %}
+{% load tree_menu_tags %}
+
+{% block main_menu %}
+    {% draw_menu 'main_menu' %} <!-- Вызов тега для отображения меню -->
+{% endblock %}
 
 {% block title %}{{ flatpage.title }}{% endblock %}
 
 {% block content %}
     {{ flatpage.content }}
+{% endblock %}
+
+{% block footer %}
+    <!-- Подвал -->
 {% endblock %}

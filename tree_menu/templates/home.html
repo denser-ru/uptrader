@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
+{% load tree_menu_tags %}
+
+{% block main_menu %}
+    {% draw_menu 'main_menu' %} <!-- Вызов тега для отображения меню -->
+{% endblock %}
 
 {% block title %}{{ item.name }}{% endblock %}
 
 {% block content %}
     <h1>{{ item.name }}</h1>
     <p>Тут предполагается контент главной страницы.</p>
+{% endblock %}
+
+{% block footer %}
+    {% draw_menu 'second_menu' %} <!-- Вызов тега для отображения меню -->
+    <!-- Подвал -->
 {% endblock %}
